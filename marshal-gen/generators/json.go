@@ -172,16 +172,16 @@ func (g *marshalGen) GenerateType(c *generator.Context, t *types.Type, w io.Writ
 }
 
 var templateCode = `
-// MarshalJSON can marshal themselves into valid JSON.
-func (obj *$.type|raw$) MarshalJSON() ([]byte, error) {
+// MarshalJSONBinary can marshal themselves into valid JSON.
+func (obj *$.type|raw$) MarshalJSONBinary() ([]byte, error) {
 	return json.Marshal(obj)
 }
 
-// UnmarshalJSON that can unmarshal a JSON description of themselves.
+// UnmarshalJSONBinary that can unmarshal a JSON description of themselves.
 // The input can be assumed to be a valid encoding of
 // a JSON value. UnmarshalJSON must copy the JSON data
 // if it wishes to retain the data after returning.
-func (obj *$.type|raw$) UnmarshalJSON(data []byte) error {
+func (obj *$.type|raw$) UnmarshalJSONBinary(data []byte) error {
 	if err := json.Unmarshal(data, &obj); err != nil {
 		return err
 	}
@@ -193,7 +193,7 @@ func (obj *$.type|raw$) UnmarshalJSON(data []byte) error {
 // to any format that accepts a string or to an unformatted printer
 // such as Print.
 func (obj *$.type|raw$) String() string {
-	bs, _ := obj.MarshalJSON()
+	bs, _ := obj.MarshalJSONBinary()
 	return string(bs)
 }
 `

@@ -4,15 +4,19 @@
 
 ## marshal-gen
 
-自动生成 `struct` 的`json marshaler/unmarshaler` & `stringer` 方法
+自动生成 `struct` 一些方法
 
 ```
-MarshalJSON() ([]byte, error)
+MarshalJSONBinary() ([]byte, error)
 
-UnmarshalJSON(data []byte) error
+UnmarshalJSONBinary(data []byte) error
 
 String() string
 ``` 
+
+> 选择不实现 以下方法是因为:    
+> 生成 `MarshalJSON` 方法存在嵌套结构体出现 `goroutine stack exceeds` 问题  
+> 生成 `UnmarshalJSON` 方法存在嵌套结构体出现 `goroutine stack exceeds` 问题   
 
 **安装 marshal-gen**
 
