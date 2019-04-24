@@ -21,7 +21,7 @@ String() string
 **安装 marshal-gen**
 
 ```
-go install github.com/zhaolion/gengo/marshal-gen
+go install github.com/zhaolion/gengo/cmd/autogen/marshal-gen
 ```
 
 **在你的模型文件中添加 go generate 注释**

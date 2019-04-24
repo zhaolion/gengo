@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/zhaolion/gengo/marshal-gen/generators"
+	"github.com/zhaolion/gengo/cmd/autogen/marshal-gen/generators"
 	"k8s.io/gengo/args"
 	"k8s.io/klog"
 )
