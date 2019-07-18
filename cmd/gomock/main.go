@@ -107,7 +107,9 @@ func (l *lookup) find(dir string) {
 
 		for _, t := range pkg.Types {
 			if t.Kind == types.Interface {
-				result = append(result, t)
+				if strings.ToLower(string(t.Name.Name[0])) != string(t.Name.Name[0]) {
+					result = append(result, t)
+				}
 			}
 		}
 	}
