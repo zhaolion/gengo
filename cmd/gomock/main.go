@@ -43,7 +43,7 @@ func main() {
 			*targetPackage = strings.ToLower(i.Name.Name)
 		}
 
-		_, _ = buf.WriteString(fmt.Sprintf("//go:generate mockgen -destination %s/%s -package %s %s %s\n", targetFolder, "mock.go", *targetPackage, i.Name.Package, i.Name.Name))
+		_, _ = buf.WriteString(fmt.Sprintf("//go:generate mockgen -destination %s/%s -package %s -self_package=%s %s %s\n", targetFolder, "mock.go", *targetPackage, i.Name.Package, i.Name.Package, i.Name.Name))
 	}
 
 	if err := os.MkdirAll(filepath.Dir(*targetDoc), 0755); err != nil {
