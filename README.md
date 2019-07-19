@@ -8,7 +8,7 @@
 go get -u github.com/zhaolion/gengo/...
 ``` 
 
-## gomock genergate doc
+## gomock generate doc
 
 根据项目里面的接口自动生成带 `//go:generate` [golang/mock](https://github.com/golang/mock) 文件，方便维护你的 gomock 代码
 
