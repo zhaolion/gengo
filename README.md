@@ -2,6 +2,29 @@
 
 一些 Golang 代码自动生成工具
 
+## install
+
+```
+go get -u github.com/zhaolion/gengo/...
+``` 
+
+## gomock genergate doc
+
+根据项目里面的接口自动生成带 `//go:generate` gomock 文件，方便维护你的 gomock 代码
+
+install:
+```
+go install github.com/zhaolion/gengo/cmd/gomock
+```
+
+usage:
+
+```
+gomock -packagesBase={your package go path base} -packagesDir="." -targetDoc="mock/doc.go" -targetPrefix="" -targetPackage="mock"
+go generate ./mock/...
+```
+
+
 ## marshal-gen
 
 自动生成 `struct` 一些方法
