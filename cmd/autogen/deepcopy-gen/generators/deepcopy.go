@@ -40,7 +40,7 @@ type CustomArgs struct {
 
 // This is the comment tag that carries parameters for deep-copy generation.
 const (
-	tagEnabledName              = "k8s:deepcopy-gen"
+	tagEnabledName              = "gengo:deepcopy"
 	interfacesTagName           = tagEnabledName + ":interfaces"
 	interfacesNonPointerTagName = tagEnabledName + ":nonpointer-interfaces" // attach the DeepCopy<Interface> methods to the
 )
