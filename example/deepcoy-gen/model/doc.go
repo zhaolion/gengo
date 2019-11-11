@@ -4,4 +4,4 @@
 //
 package model
 
-//go:generate marshal-gen -i github.com/zhaolion/gengo/example/marshal-gen/model
+//go:generate deepcopy-gen -i github.com/zhaolion/gengo/example/marshal-gen/model

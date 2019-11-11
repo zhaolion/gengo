@@ -81,7 +81,7 @@ func (t *T) DeepCopyInto(t *T)
 **安装 marshal-gen**
 
 ```
-go install github.com/zhaolion/gengo/cmd/autogen/deepcoy-gen
+go install github.com/zhaolion/gengo/cmd/autogen/deepcopy-gen
 ```
 
 **在你的包文件中添加 go generate 注释**
@@ -95,5 +95,5 @@ go install github.com/zhaolion/gengo/cmd/autogen/deepcoy-gen
 //
 package model
 
-//go:generate marshal-gen -i github.com/zhaolion/gengo/example/marshal-gen/model
+//go:generate deepcopy-gen -i github.com/zhaolion/gengo/example/marshal-gen/model
 ```
